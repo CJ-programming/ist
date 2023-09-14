@@ -18,13 +18,6 @@ from os.path import exists
 from socket import gethostname
 from socket import gethostbyname
 
-from struct import pack
-from struct import unpack
-
-from sys import stdout
-
-from time import sleep
-
 def read_json_file(file):
     with open(file, 'r') as f:
         json_data = load(f)
