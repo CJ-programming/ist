@@ -11,7 +11,6 @@ from crypto_utils import uncompress_verifying_key
 from crypto_utils import verify_sig
 from crypto_utils import init_all
 
-from database import get_col_last_value
 from database import get_cursor
 from database import read_db
 from database import read_db_json
@@ -32,19 +31,13 @@ from global_vars import version
 from hashlib import sha256
 
 from json import dumps
-from json import loads
-
-from os.path import exists
-from os.path import getsize
-
+    
 from setup_config import boot_strap 
 from setup_config import update_network_status
 
-from utils import create_file
 from utils import create_password
 from utils import decrypt_file
 from utils import exclude_keys
-from utils import get_net_addr
 from utils import get_private_ipv4_address
 from utils import write_json_file
 from utils import read_json_file
