@@ -11,9 +11,7 @@ from crypto_utils import uncompress_verifying_key
 from crypto_utils import verify_sig
 from crypto_utils import init_all
 
-from database import get_col_last_value
 from database import get_cursor
-from database import init_peers
 from database import read_db
 from database import read_db_json
 from database import update_db
@@ -33,22 +31,13 @@ from global_vars import version
 from hashlib import sha256
 
 from json import dumps
-from json import loads
-
-from os.path import exists
-from os.path import getsize
 
 from setup_config import update_network_status
 
-from utils import create_file
-from utils import create_password
 from utils import decrypt_file
 from utils import exclude_keys
-from utils import get_net_addr
 from utils import get_private_ipv4_address
-from utils import write_json_file
 from utils import read_json_file
-from utils import str_b64_encode
 from utils import verify_password
 
 app = Flask(__name__)
@@ -160,8 +149,6 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
-    """
-
     file_password = create_password()
     
     while True:
@@ -175,10 +162,6 @@ if __name__ == '__main__':
 
     create_private_key(key)
 
-    """
-
-    key = verify_password(b'abc')
-    
     private_key = SigningKey.from_string(decrypt_file('private_key.bin', key), SECP256k1)
     verifying_key = private_key.get_verifying_key()
 
