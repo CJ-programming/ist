@@ -1,5 +1,5 @@
 # IST
-Before any of this, in the node folder, configure the global_vars seed_ipv4_address variable to be the ipv4_address of the seed node, and the same with the port.
+Before any of this, in the node folder, configure the global_vars *seed_ipv4_address* variable to be the ipv4_address of the seed node, and the same with the port.
 
 To run this project, you must first run api.py in the seed node folder with the -r flag after:
 (python api.py -r)
