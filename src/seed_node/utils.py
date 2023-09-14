@@ -20,13 +20,6 @@ from os.path import exists
 from socket import gethostname
 from socket import gethostbyname
 
-from struct import pack
-from struct import unpack
-
-from sys import stdout
-
-from time import sleep
-
 def str_b64_encode(data_bytes):
     b64_str = b64encode(data_bytes).decode('utf-8')
     return b64_str
