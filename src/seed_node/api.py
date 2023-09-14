@@ -34,6 +34,7 @@ from json import dumps
 
 from setup_config import update_network_status
 
+from utils import create_password
 from utils import decrypt_file
 from utils import exclude_keys
 from utils import get_private_ipv4_address
